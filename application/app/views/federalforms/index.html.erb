@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Federalforms</h1>
+<h1>Federal Income Tax Calculator</h1>
 
 <table>
   <thead>
@@ -20,8 +20,7 @@
         <td><%= federalform.tax %></td>
         <td><%= federalform.time_type %></td>
         <td><%= federalform.income %></td>
-        <td><%= link_to 'Show', federalform %></td>
-        <td><%= link_to 'Edit', edit_federalform_path(federalform) %></td>
+        <td><%= link_to 'Show', edit_federalform_path(federalform) %></td>
         <td><%= link_to 'Destroy', federalform, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -30,4 +29,4 @@
 
 <br>
 
-<%= link_to 'New Federalform', new_federalform_path %>
+<%= link_to 'Create new Federal tax calculation', new_federalform_path %>

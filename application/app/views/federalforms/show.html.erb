@@ -6,18 +6,18 @@
 </p>
 
 <p>
-  <strong>Tax:</strong>
-  <%= @federalform.tax %>
-</p>
-
-<p>
-  <strong>Time type:</strong>
+  <strong>Calculation Type:</strong>
   <%= @federalform.time_type %>
 </p>
 
 <p>
   <strong>Income:</strong>
   <%= @federalform.income %>
+</p>
+
+<p>
+  <strong>Estimated Federal Tax:</strong>
+  <%= @federalform.tax %>
 </p>
 
 <%= link_to 'Edit', edit_federalform_path(@federalform) %> |

@@ -1,7 +1,7 @@
 <%= form_with(model: federalform, local: true) do |form| %>
   <% if federalform.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(federalform.errors.count, "error") %> prohibited this federalform from being saved:</h2>
+      <h2><%= pluralize(federalform.errors.count, "error") %> prohibited this form from being saved:</h2>
 
       <ul>
       <% federalform.errors.full_messages.each do |message| %>
@@ -16,22 +16,26 @@
     <%= form.datetime_select :date, id: :federalform_date %>
   </div>
 
-  <div class="field">
-    <%= form.label :tax %>
-    <%= form.text_field :tax, id: :federalform_tax %>
-  </div>
-
-  <div class="field">
-    <%= form.label :time_type %>
-    <%= form.text_field :time_type, id: :federalform_time_type %>
+  <div class="control-group">
+    <%= form.label "Calculation Type", class: 'control-label' %>
+    <div class="controls">
+      <%= form.select(:time_type, options_for_select([['Monthly', true],['Yearly', false]])) %>
+    </div>
   </div>
 
   <div class="field">
     <%= form.label :income %>
     <%= form.text_field :income, id: :federalform_income %>
   </div>
-
+  <div class="field">
+    <%= form.label "Calculated Tax for the Year by Month:", class: 'control-label' %>
+      <%= @federalform = federalform.income.to_i * 0.133 * 12 %>
+  </div>
+  <div class="field">
+    <%= form.label "Calculated Tax by Year:", class: 'control-label' %>
+      <%= @federalform = federalform.income.to_i * 0.133%>
+  </div>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Calculate', class: 'btn btn-default' %>
   </div>
 <% end %>
