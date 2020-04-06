@@ -41,6 +41,10 @@ Rails.application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+  
+  config.action_mailer.default_url_option = { :host => 'localhost:3000' }
+  config.action_mailer.delivery_method = :smpt
+  config.action_mailer.perform_deliveries = true
 
   # Suppress logger output for asset requests.
   config.assets.quiet = true

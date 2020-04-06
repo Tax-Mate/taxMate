@@ -1,0 +1,2 @@
+class Federalform < ApplicationRecord
+end

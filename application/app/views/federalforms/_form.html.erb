@@ -1,0 +1,37 @@
+<%= form_with(model: federalform, local: true) do |form| %>
+  <% if federalform.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(federalform.errors.count, "error") %> prohibited this federalform from being saved:</h2>
+
+      <ul>
+      <% federalform.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.datetime_select :date, id: :federalform_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tax %>
+    <%= form.text_field :tax, id: :federalform_tax %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time_type %>
+    <%= form.text_field :time_type, id: :federalform_time_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :income %>
+    <%= form.text_field :income, id: :federalform_income %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

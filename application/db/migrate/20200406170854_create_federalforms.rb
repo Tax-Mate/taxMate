@@ -1,0 +1,12 @@
+class CreateFederalforms < ActiveRecord::Migration[5.1]
+  def change
+    create_table :federalforms do |t|
+      t.datetime :date
+      t.decimal :tax
+      t.string :time_type
+      t.decimal :income
+
+      t.timestamps
+    end
+  end
+end

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @federalform.date %>
+</p>
+
+<p>
+  <strong>Tax:</strong>
+  <%= @federalform.tax %>
+</p>
+
+<p>
+  <strong>Time type:</strong>
+  <%= @federalform.time_type %>
+</p>
+
+<p>
+  <strong>Income:</strong>
+  <%= @federalform.income %>
+</p>
+
+<%= link_to 'Edit', edit_federalform_path(@federalform) %> |
+<%= link_to 'Back', federalforms_path %>
