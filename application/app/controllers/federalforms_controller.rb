@@ -25,6 +25,12 @@ class FederalformsController < ApplicationController
   # POST /federalforms.json
   def create
     @federalform = Federalform.new(federalform_params)
+    @federalform.user = current_user
+        
+   def calculate
+    total = (@federalform.income + 12)
+    return total
+   end
 
     respond_to do |format|
       if @federalform.save
@@ -60,7 +66,13 @@ class FederalformsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+  
+  def calculate
+    total = (@federalform.income + 12)
+    return total
+  end
+  
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_federalform

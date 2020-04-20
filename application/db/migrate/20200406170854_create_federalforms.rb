@@ -5,6 +5,7 @@ class CreateFederalforms < ActiveRecord::Migration[5.1]
       t.decimal :tax
       t.string :time_type
       t.decimal :income
+      t.decimal :total
 
       t.timestamps
     end
