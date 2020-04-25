@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20200420071109) do
     t.decimal "tax"
     t.string "time_type"
     t.decimal "income"
+    t.decimal "total"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"

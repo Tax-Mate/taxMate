@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   resources :users
   resources :federalforms
   get 'welcome/index'
-
+  get 'federalforms/federal'
+  
   resources :articles
   
    resources :sessions, only:[:new, :create, :destroy]

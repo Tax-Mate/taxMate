@@ -1,5 +1,66 @@
-<h1>New Federalform</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-<%= render 'form', federalform: @federalform %>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Federal Tax Calculator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="menu">
+        <ul>
+            <li><%= link_to 'Home', controller: 'welcome' %></li>
+            <li><%= link_to 'Federal Tax', controller: 'federalforms' %></li>
+            <li><%= link_to 'State Tax', controller: 'federalforms' %></li>
+            <li><%= link_to 'Resources', controller: 'federalforms' %></li>
+        </ul>
+    </div>
+
+    <div id="hero">
+        <h1>Federal Calculator</h1><br><br><br>
+        <a href="https://www.paypal.me/tdolphus" class="button4" style="background-color:green">Donate</a>
+    </div>
+    <div class="form">
+        <%= render 'form', federalform: @federalform %>
+        <!------HTML Form probably not necessary
+        <form action="">
+            <label for="date">Date</label>
+            <input type="date" name="date" id=""><br><br>
+
+            <label for="calcType">Calculation Type</label>
+
+            <select id="cars">
+                <option value="Monthly">Monthly</option>
+                <option value="Yearly">Yearly</option>
+            </select><br><br>
+            <label for="income">Income</label>
+            <input type="text" name="" id=""><br><br>
+            <input type="submit" value="Submit">
+        </form>
+        ---->
+    </div>
+    <section class="footer ">
+        <div>
+            <h3>MADE BY</h3>
+            <ul>
+                <li>Titus Dolphus</li>
+                <li>Evan West</li>
+                <li>Andy Darkwah</li>
+                <li>Zach Ader</li>
+            </ul>
+            <a href="https://www.paypal.me/tdolphus">Donate</a>
+        </div>
+    </section>
+
+</body>
+
+</html>
+
+</body>
+
+</html>
+
 
 <%= link_to 'Back', federalforms_path %>

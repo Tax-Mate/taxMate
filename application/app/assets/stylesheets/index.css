@@ -1,0 +1,163 @@
+a {
+    color: black;
+}
+
+a:hover {
+    color: green;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.menu {
+    background-color: black;
+}
+
+a.button4 {
+    display: inline-block;
+    padding: 0.3em 1.2em;
+    margin: 0 0.1em 0.1em 0;
+    border: 0.16em solid rgba(255, 255, 255, 0);
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #FFFFFF;
+    text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+    text-align: center;
+    transition: all 0.2s;
+    margin-left: 47%;
+}
+
+a.button4:hover {
+    border-color: rgba(255, 255, 255, 1);
+}
+
+@media all and (max-width:30em) {
+    a.button4 {
+        display: block;
+        margin: 0.2em auto;
+    }
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.menu li {
+    float: left;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    background-color: #111;
+}
+
+.Hero {
+    background-image: url(home.jpg);
+    height: 500px;
+    background-size: cover;
+    font-weight: 100;
+}
+
+.Hero h1 {
+    text-align: center;
+    color: white;
+    font-size: 10vh;
+    padding-top: 250px;
+    margin: 0px;
+}
+
+.card h2 {
+    text-align: center;
+}
+
+.card p {
+    text-align: center;
+}
+.link{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+.card {
+    width: 33%;
+    margin-bottom: 5%;
+    float: left;
+}
+
+.row {
+    margin-top: 5%;
+    clear: both;
+}
+
+.icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer {
+    clear: both;
+    background-color: #333;
+    height: 200px;
+}
+
+#hero h1 {
+    text-align: center;
+    font-weight: 100;
+    font-size: 60px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    padding-top: 150px;
+    margin: 0px;
+}
+
+#hero {
+    background-image: linear-gradient(to bottom, rgba(14, 14, 14, 0.52), rgba(0, 0, 0, 0.73)), url('https://cdn.hswstatic.com/gif/how-income-tax-1000.jpg');
+    background-size: cover;
+    height: 300px;
+}
+
+.form {
+    background-color: #333;
+    text-emphasis: center;
+    margin: 5% 10% 5% 10%;
+    padding: 5%;
+    border-radius: 25px;
+}
+
+.form label {
+    color: white;
+}
+
+.footer h3 {
+    color: white;
+}
+
+.footer li {
+    color: white;
+}
+
+.footer a {
+    color: white;
+}
+
+.footer div {
+    margin-left: 10%;
+    padding-top: 20px;
+}
