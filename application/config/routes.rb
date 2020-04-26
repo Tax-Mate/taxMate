@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   get 'sessions/destroy'
 
   resources :users
+  resources :stateforms
   resources :federalforms
+   
   get 'welcome/index'
 
   resources :articles

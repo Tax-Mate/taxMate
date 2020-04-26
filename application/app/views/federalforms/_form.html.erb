@@ -11,9 +11,17 @@
     </div>
   <% end %>
 
+  
+<center>
   <div class="field">
     <%= form.label :date %>
     <%= form.datetime_select :date, id: :federalform_date %>
+  </div>
+  <div class="control-group">
+    <%= form.label "Filling Status", class: 'control-label' %>
+    <div class="controls">
+      <%= form.select(:time_type, options_for_select([['Single', true],['Joint', false]])) %>
+    </div>
   </div>
 
   <div class="control-group">
@@ -37,5 +45,8 @@
   </div>
   <div class="actions">
     <%= form.submit 'Calculate', class: 'btn btn-default' %>
+    
   </div>
+  </center>
+  
 <% end %>

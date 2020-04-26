@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>State Income Tax Calculator</h1>
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Tax</th>
+      <th>Time type</th>
+      <th>Income</th>
+      <th>State</th>
+      <th>Tax</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%@stateform.each do |stateform| %>
+      <tr>
+         <td><%= stateform.user.name %></td>
+        <td><%= stateform.date %></td>
+        <td><%= stateform.tax %></td>
+        <td><%= stateform.time_type %></td>
+        <td><%= stateform.income %></td>
+        <td><%= stateform.state %></td>
+         <td><%= stateform.tax %></td>
+        <td><%= link_to 'Show', edit_stateform_path(stateform) %></td>
+        <td><%= link_to 'Destroy', stateform, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Create new State tax calculation', new_stateform_path %>
+<%= link_to "Home", root_path %>
+

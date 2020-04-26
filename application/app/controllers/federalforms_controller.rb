@@ -10,6 +10,7 @@ class FederalformsController < ApplicationController
   # GET /federalforms/1
   # GET /federalforms/1.json
   def show
+    @federalform = Federalform.find(params[:id])
   end
 
   # GET /federalforms/new
@@ -27,9 +28,8 @@ class FederalformsController < ApplicationController
     @federalform = Federalform.new(federalform_params)
     @federalform.user = current_user
         
-   def calculate
-    total = (@federalform.income + 12)
-    return total
+   def calculate num
+    num + 20
    end
 
     respond_to do |format|

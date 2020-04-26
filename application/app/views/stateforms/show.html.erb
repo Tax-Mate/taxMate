@@ -1,0 +1,56 @@
+
+
+<p id="notice"><%= notice %></p>
+
+
+	<h1>Calculation History</h1>
+
+ <p>     
+   
+		
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @stateform.date %>
+</p>
+
+<p>
+  <strong>Calculation Type:</strong>
+  <%= @stateform.time_type %>
+</p>
+
+<p>
+  <strong>Income:</strong>
+  <%= @stateform.income %>
+</p>
+
+<p>
+  <strong>Estimated State Tax:</strong>
+  
+   <%= @stateform.tax = calculate(@stateform.income,@stateform.status,@stateform.state)%>
+
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @stateform.status %>
+</p>
+<p>
+  <strong>State:</strong>
+  <%= @stateform.state %>
+</p>
+
+
+
+
+
+
+
+<%= link_to 'Edit', edit_stateform_path(@stateform) %> |
+<%= link_to 'Back', stateforms_path %>
+<%= link_to 'home', root_path %>
+
+
+
+
