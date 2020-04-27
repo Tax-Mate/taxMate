@@ -2,57 +2,79 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+  
+
+   
     <title>Tax-Mate</title>
     <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-    <div class="menu">
-        <ul>
-            <li><%= link_to 'Home', controller: 'welcome' %></li>
-            <li><%= link_to 'Federal Tax', controller: 'federalforms' %></li>
-            <li><%= link_to 'State Tax', controller: 'federalforms' %></li>
-            <li><%= link_to 'Resources', controller: 'federalforms' %></li>
-        </ul>
-    </div>
+    
     
     <div class="Hero">
         <h1>Tax Mate</h1>
+         <div class="menu">
+             
+             </div>
+             
         <br><br><br>
         <a href="https://www.paypal.me/tdolphus" class="button4" style="background-color:green">Donate</a>
+        
     </div>
     <a>
         <div class="row"></div>
+          <a href="/federalforms ">
         <div class="card">
             <img class="icon" src="/assets/icon1.png" alt="adfa"><br>
             <div class="link"><%= link_to 'Federal Tax Calculator', controller: 'federalforms' %></div>
-            <p>Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet consec</p>
+            <p>Welcome to Our Free Calcuator, where you can estimate your
+            individual income tax return for free using our estimator.</p>
         </div>
     </a>
-    <a>
+   <a href="/stateforms ">
         <div class="card">
             <img class="icon" src="/assets/icon2.png" " alt="adfa "><br>
-         <div class="link"><%= link_to 'State Tax Calculator', controller: 'federalforms' %></div>
-        <p>Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet consec</p>
+         <div class="link"><%= link_to 'State Tax Calculator', controller: 'stateforms' %></div>
+        <p>Want to check roughly how much taxes you ll be oweing? Click here to get an estimate</p>
     </div>
 </a>
-<a href="# ">
+<a href="/resources ">
     <div class="card ">
         <img class="icon " src="/assets/icon3.png "  alt="adfa "><br>
-        <div class="link"><%= link_to 'Resources', controller: 'federalforms' %></div>
+        <div class="link"><%= link_to 'Resources', controller: 'resources' %></div>
         <p>Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet consec</p>
     </div>
 </div>
 </a>
+
     <section class="footer ">
 <div>
+ <p>
+    <% if current_user %>
+        Logged in as <%= current_user.name %>
+    <div class="btn btn-outline-success btn-sm">
+           <%= link_to "Log Out", logout_path %>
+     </div>
+                                 
+     <% else %>
+    <div class="btn btn-outline-success btn-sm">
+        <%= link_to "Sign Up", signup_path %> or 
+        </div>
+        <div class="btn btn-outline-success btn-sm">
+        <%= link_to "Log In ", login_path %>
+        </div>
+    <% end %>
+</p>
         <h3>MADE BY</h3>
         <ul>
             <li>Titus Dolphus</li>
             <li>Evan West</li>
-            <li>Andy Darkwah</li>
+            <li>Andrew Darkwah</li>
             <li>Zach Ader</li>
         </ul>
         <a href="https://www.paypal.me/tdolphus ">Donate</a>

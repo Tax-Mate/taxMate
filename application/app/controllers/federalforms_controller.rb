@@ -1,6 +1,7 @@
 class FederalformsController < ApplicationController
   before_action :set_federalform, only: [:show, :edit, :update, :destroy]
-
+ 
+  
   # GET /federalforms
   # GET /federalforms.json
   def index
@@ -10,6 +11,7 @@ class FederalformsController < ApplicationController
   # GET /federalforms/1
   # GET /federalforms/1.json
   def show
+  @federalform = Federalform.find(params[:id])
   end
 
   # GET /federalforms/new

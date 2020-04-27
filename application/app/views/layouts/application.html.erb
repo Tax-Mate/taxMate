@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blog</title>
+   
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
+     <div class="menu ">
+        <ul>
+            <li><%= link_to 'Home', controller: 'welcome' %></li>
+            <li><%= link_to 'Federal Tax', controller: 'federalforms' %></li>
+            <li><%= link_to 'State Tax', controller: 'stateforms' %></li>
+            <li><%= link_to 'Resources', controller: 'federalforms' %></li>
+           
+      
+             <% if current_user %>
+                Logged in as <%= current_user.name %> 
+               <li><%= link_to "Log Out", logout_path %></li>
+                 <% else %>
+                 <li><%= link_to "Log In", login_path %></li>
+                 <li><%= link_to "Sign Up", signup_path %></li>
+                 
+                   <% end %>
+                   <p class="notice pull-right"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+            </div>
+        </ul>
+    </div>
+  
     <%= yield %>
   </body>
+  
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </html>

@@ -1,0 +1,72 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State Tax Calculator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    
+    <div id="hero">
+        <h1>State Tax Estimate Calculator</h1><br><br><br>
+        <a href="https://www.paypal.me/tdolphus" class="button4" style="background-color:green">Donate</a>
+    </div>
+<p id="notice"><%= notice %></p>
+
+
+	<h1>Calculation History</h1>
+
+ <p>     
+   
+		
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @stateform.date %>
+</p>
+
+<p>
+  <strong>Calculation Type:</strong>
+  <%= @stateform.time_type %>
+</p>
+
+<p>
+  <strong>Income:</strong>
+  <%= @stateform.income %>
+</p>
+
+<p>
+  <strong>Estimated State Tax:</strong>
+  
+   <%= @stateform.tax = calculate(@stateform.income,@stateform.status,@stateform.state)%>
+
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @stateform.status %>
+</p>
+<p>
+  <strong>State:</strong>
+  <%= @stateform.state %>
+</p>
+
+
+
+
+
+
+
+<%= link_to 'Edit', edit_stateform_path(@stateform) %> |
+<%= link_to 'Back', stateforms_path %>
+<%= link_to 'home', root_path %>
+
+
+
+
