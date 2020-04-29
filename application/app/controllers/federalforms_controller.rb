@@ -36,7 +36,7 @@ class FederalformsController < ApplicationController
 
     respond_to do |format|
       if @federalform.save
-        format.html { redirect_to @federalform, notice: 'Federalform was successfully created.' }
+        format.html { redirect_to @federalform, notice: 'Hurray your Estimate is here !!!' }
         format.json { render :show, status: :created, location: @federalform }
       else
         format.html { render :new }
@@ -69,11 +69,7 @@ class FederalformsController < ApplicationController
     end
   end
   
-  def calculate
-    total = (@federalform.income + 12)
-    return total
-  end
-  
+ 
   
   private
     # Use callbacks to share common setup or constraints between actions.

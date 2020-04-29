@@ -37,7 +37,7 @@ def create
     
     respond_to do |format|
       if @stateform.save
-        format.html { redirect_to @stateform, notice: 'stateform was successfully created.' }
+        format.html { redirect_to @stateform, notice: 'Hurray your Estimate is here !!!' }
         format.json { render :show, status: :created, location: @stateform }
         
     

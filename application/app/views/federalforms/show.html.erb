@@ -1,24 +1,65 @@
- <p id="notice"><%= notice %></p>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Federal Tax Calculator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    
+    <div id="hero">
+        <h1>Federal Tax Estimate Calculator</h1><br><br><br>
+        <a href="https://www.paypal.me/tdolphus" class="button4" style="background-color:green">Donate</a>
+    </div>
+
+
+<center>
+	<h1>Estimate Tax Payable</h1>
+
+ <p>     
+   
+		
+</p>
 
 <p>
   <strong>Date:</strong>
   <%= @federalform.date %>
 </p>
 
-<p>
-  <strong>Calculation Type:</strong>
-  <%= @federalform.time_type %>
-</p>
+
 
 <p>
-  <strong>Income:</strong>
+  <strong>Income: $</strong>
   <%= @federalform.income %>
 </p>
 
 <p>
-  <strong>Estimated Federal Tax:</strong>
-  <%= @federalform.tax %>
+  <strong>Estimated federal Tax: $</strong>
+  
+   <%= @federalform.tax = calculatefed(@federalform.income,@federalform.time_type)%>
+
 </p>
+
+<p>
+  <strong>Marital Status:</strong>
+  <%= @federalform.time_type %>
+</p>
+
+
+
+</center>
+
+
+
 
 <%= link_to 'Edit', edit_federalform_path(@federalform) %> |
 <%= link_to 'Back', federalforms_path %>
+<%= link_to 'home', root_path %>
+
+<center><p id="notice"><%= notice %></p></center>
+

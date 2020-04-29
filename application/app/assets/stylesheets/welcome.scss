@@ -3,5 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 h1 {
   font-size: 32px;
-  color: Blue;
+  color: Green;
+}
+
+.center {
+  text-align: center;
+  border: 3px solid green;
+    margin: 0 0.1em 0.1em 0;
+    border: 0.16em solid rgba(255, 255, 255, 0);
+    border-radius: 2em;
 }
