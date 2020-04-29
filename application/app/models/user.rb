@@ -1,4 +1,4 @@
-class User < ApplicationRecord
+    class User < ApplicationRecord
     has_many :articles
     has_many :federalforms
     has_many :stateform

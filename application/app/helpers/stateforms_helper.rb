@@ -19,7 +19,7 @@ def calculate (income, status, state )
                end
            
            when "AK"
-           return  @total = @stateform.income
+           return  @total = 0
            when "AZ"
                if@income <=26000
                    return  @total = (@stateform.income * 0.0259) 
@@ -28,31 +28,7 @@ def calculate (income, status, state )
                end
                     
             
-           when "AR"
-           return  @total = (@stateform.income * 0.129) 
-           when "CA"
-           return  @total = (@stateform.income * 0.129) 
-           when "CO"
-           return  @total = (@stateform.income * 0.129) 
-           when "CT"
-           return  @total = (@stateform.income * 0.129) 
-           when "DE"
-           return  @total = (@stateform.income * 0.129) 
-           when "DC"
-           return  @total = (@stateform.income * 0.129) 
-           when "FL"
-           return  @total = (@stateform.income * 0.129) 
-           when "GA"
-           return  @total = (@stateform.income * 0.129) 
-           when "HI"
-           return  @total = (@stateform.income * 0.129) 
-           when "ID"
-           return  @total = (@stateform.income * 0.129) 
-           when "IL"
-           return  @total = (@stateform.income * 0.129) 
-           when "IA"
-           return  @total = (@stateform.income * 0.129) 
-           
+          
         end
     
     else if @status == "joint"
@@ -69,7 +45,7 @@ def calculate (income, status, state )
                end
            
            when "AK"
-           return  @total = @stateform.income
+           return  @total =0
            when "AZ"
                if@income <=26000
                    return  @total = (@stateform.income * 0.0259) 
